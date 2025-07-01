@@ -129,7 +129,7 @@ function Testimonials() {
                   <h6 className="sub-title mb-15">Dev Quality</h6>
                   <div className="text">
                     <p>
-                      “ I've really enjoyed the collaboration in developing my product. I'm based in the US and am creating a unique product and he's been phenomenal to work with so far.
+                      “ I have really enjoyed the collaboration in developing my product. I'm based in the US and am creating a unique product and he's been phenomenal to work with so far.
                       ”
                     </p>
                   </div>
