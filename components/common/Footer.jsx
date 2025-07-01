@@ -18,11 +18,27 @@ function Footer() {
                 Mirpur <br /> Dhaka, Bangladesh
               </h6>
               <h6 className="mt-30 mb-15">
-                <a href="#0">dev.shakib@outlook.com</a>
-              </h6>
-              <a href="#0" className="underline">
-                <span className="fz-22 main-color">+8801771659336 (Watchapp)</span>
-              </a>
+  <a
+    href="mailto:dev.shakib@outlook.com"
+    className="text-blue-500 underline"
+  >
+    dev.shakib@outlook.com
+  </a>
+</h6>
+
+              
+              <a
+  href="https://wa.me/8801771659336"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="underline flex items-center gap-2"
+>
+  <span className="fz-22 main-color">
+    +8801771659336
+  </span>
+  <i className="fab fa-whatsapp text-green-500 text-xl"></i>
+</a>
+
             </div>
           </div>
           {/* <div className="col-lg-2">
