@@ -30,10 +30,10 @@ function About() {
               <div className="text">
                 <h4 className="mb-30">
                   I&apos;m{' '}
+                  Software Engineer and Web Developer
                   <span className="fw-200">
-                  Software Engineer and UI-UX Designer
-                  </span>{' '}
                   From Dhaka, Bangladesh, Working on Business Building and Creating Digital Products
+                  </span>{' '}
                 </h4>
                 <p>
                   I specialize in building fast, reliable, and user-friendly full-stack web applications. With a strong foundation in both frontend and backend technologies, I bring ideas to life for businesses, startups, and product teams alike

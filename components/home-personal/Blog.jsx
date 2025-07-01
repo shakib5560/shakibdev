@@ -7,7 +7,7 @@ function Blog() {
         <div className="sec-head mt-20 mb-80">
           <div className="d-flex mt-20 align-items-center">
             <div className='mt-20 pt-50'>
-              <span className="sub-title main-color mt-20 mb-5">My Blogs</span>
+              <span className="sub-title main-color mt-20 mb-5">Featured Blogs</span>
               <h3 className="fw-600 fz-50 text-u d-rotate wow">
                 <span className="rotate-text">
                   Latest <span className="fw-200">Articles</span>
