@@ -30,8 +30,7 @@ function About() {
               <div className="text">
                 <h4 className="mb-30">
                   I&apos;m{' '}
-                  Software Engineer and Web Developer
-                  <span className="fw-200">
+                  Software Engineer and Web Developer <span className="fw-200">
                   From Dhaka, Bangladesh, Working on Business Building and Creating Digital Products
                   </span>{' '}
                 </h4>

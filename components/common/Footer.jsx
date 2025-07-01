@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 function Footer() {
   return (
@@ -18,26 +19,26 @@ function Footer() {
                 Mirpur <br /> Dhaka, Bangladesh
               </h6>
               <h6 className="mt-30 mb-15">
-  <a
-    href="mailto:dev.shakib@outlook.com"
-    className="text-blue-500 underline"
-  >
-    dev.shakib@outlook.com
-  </a>
-</h6>
+                <a
+                  href="mailto:dev.shakib@outlook.com"
+                  className="text-blue-500 underline"
+                >
+                  dev.shakib@outlook.com
+                </a>
+              </h6>
 
-              
+
               <a
-  href="https://wa.me/8801771659336"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="underline flex items-center gap-2"
->
-  <span className="fz-22 main-color">
-    +8801771659336
-  </span>
-  <i className="fab fa-whatsapp text-green-500 text-xl"></i>
-</a>
+                href="https://wa.me/8801771659336"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline flex items-center gap-2"
+              >
+                <span className="fz-22 main-color">
+                  +8801771659336
+                </span>
+                <i className="fab fa-whatsapp text-green-500 text-xl"></i>
+              </a>
 
             </div>
           </div>
@@ -60,33 +61,31 @@ function Footer() {
               </ul>
             </div>
           </div> */}
-<div className="col-lg-3">
-  <div className="column subscribe-minimal">
-    <h6 className="sub-title mb-30">ReachOut</h6>
+          <div className="col-lg-3">
+            <div className="column subscribe-minimal">
+              <h6 className="sub-title mb-30">ReachOut</h6>
 
-    {/* <div className="form-group mb-40">
+              {/* <div className="form-group mb-40">
       <input type="text" name="subscrib" placeholder="Your Email" />
       <button>
         <span className="ti-location-arrow"></span>
       </button>
     </div> */}
 
-    <ul className="rest social-icon d-flex align-items-center">
+<ul className="rest social-icon d-flex align-items-center">
       <li className="hover-this cursor-pointer">
         <a
           href="https://www.facebook.com/shamiul.shakib.7"
-          className="hover-anim"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fab fa-facebook-f"></i>
+          <FaFacebookF />
         </a>
       </li>
 
       <li className="hover-this cursor-pointer ml-10">
         <a
           href="https://x.com/DevShakib6"
-          className="hover-anim"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -97,27 +96,26 @@ function Footer() {
       <li className="hover-this cursor-pointer ml-10">
         <a
           href="https://www.linkedin.com/in/sheikh-shamiul-834878206/"
-          className="hover-anim"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fab fa-linkedin-in"></i>
+          <FaLinkedinIn />
         </a>
       </li>
 
       <li className="hover-this cursor-pointer ml-10">
         <a
           href="https://github.com/shakib5560"
-          className="hover-anim"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fab fa-github"></i>
+          <FaGithub />
         </a>
       </li>
     </ul>
-  </div>
-</div>
+              
+            </div>
+          </div>
 
         </div>
         <div className="pt-30 pb-30 mt-80 bord-thin-top">

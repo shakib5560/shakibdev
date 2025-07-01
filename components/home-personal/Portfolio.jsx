@@ -62,8 +62,10 @@ function Portfolio() {
             </div>
             <div className="ml-auto vi-more">
               <a
-                href="/portfolio-grid"
+                href="https://github.com/shakib5560"
                 className="butn butn-sm butn-bord radius-30"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <span>View All</span>
               </a>
