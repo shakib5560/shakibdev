@@ -24,7 +24,7 @@ export const metadata = {
   description: 'Dev.Shakib Personal Portfolio',
   icons: {
     icon: '/assets/imgs/favicon.png',
-    shortcut: '/assets/imgs/favicon.png',
+    shortcut: '/assets/imgs/demos.png',
     other: generateStylesheetObject([
       '/assets/css/plugins.css',
       '/assets/css/style.css',
