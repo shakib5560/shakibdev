@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaXTwitter } from 'react-icons/fa6';
 
 function Footer() {
   return (
@@ -73,8 +74,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {/* Use Twitter (X) logo */}
-          <i className="fab fa-x-twitter"></i>
+          <FaXTwitter />
         </a>
       </li>
 
