@@ -1,0 +1,6 @@
+@layer utilities {
+    .text-shadow-md {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Custom shadow */
+    }
+  }
+  
