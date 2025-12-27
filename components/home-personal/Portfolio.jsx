@@ -105,7 +105,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/1/tubex.png" alt="" />
+                  <img src="/assets/imgs/works/1/tubex-min.png" alt="" />
                 </div>
               </div>
             </div>
@@ -142,7 +142,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/1/1.jpg" alt="" />
+                  <img src="/assets/imgs/works/1/1-min.jpg" alt="" />
                 </div>
               </div>
             </div>
@@ -182,7 +182,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/1/ringo.png" alt="" />
+                  <img src="/assets/imgs/works/1/ringo-min.png" alt="" />
                 </div>
               </div>
             </div>
@@ -219,7 +219,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/1/2.jpg" alt="" />
+                  <img src="/assets/imgs/works/1/2-min.jpg" alt="" />
                 </div>
               </div>
             </div>
@@ -301,7 +301,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/1/u.png" alt="" />
+                  <img src="/assets/imgs/works/1/u-min.png" alt="" />
                 </div>
               </div>
             </div>
@@ -339,7 +339,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/1/4.jpg" alt="" />
+                  <img src="/assets/imgs/works/1/4-min.jpg" alt="" />
                 </div>
               </div>
             </div>
@@ -411,7 +411,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/1/cz.png" alt="" />
+                  <img src="/assets/imgs/works/1/cz-min.png" alt="" />
                 </div>
               </div>
             </div>

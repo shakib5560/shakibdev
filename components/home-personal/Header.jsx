@@ -24,7 +24,7 @@ function Header() {
   return (
     <div
       className="header header-personal valign bg-img"
-      data-background="/assets/imgs/header/p0.jpg"
+      data-background="/assets/imgs/header/p0-min.jpg"
       data-overlay-dark="2"
     >
       <div className="container ontop">

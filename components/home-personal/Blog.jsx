@@ -39,7 +39,7 @@ function Blog() {
                 </div>
               </div>
               <div className="img fit-img">
-                <img src="/assets/imgs/blog/1st.jpeg" alt="" />
+                <img src="/assets/imgs/blog/1st-min.jpeg" alt="" />
               </div>
               <div className="cont pt-30">
                 <h5>FastAPI vs. Express.js: A Future-Oriented Perspective</h5>
@@ -70,7 +70,7 @@ function Blog() {
                 </div>
               </div>
               <div className="img fit-img">
-                <img src="/assets/imgs/blog/1732821105546.png" alt="" />
+                <img src="/assets/imgs/blog/1732821105546-min.png" alt="" />
               </div>
               <div className="cont pt-30">
                 <h5>React + Django: The Power Duo Dominating Web Development</h5>
@@ -101,7 +101,7 @@ function Blog() {
                 </div>
               </div>
               <div className="img fit-img">
-                <img src="/assets/imgs/blog/1746206989253.png" alt="" />
+                <img src="/assets/imgs/blog/1746206989253-min.png" alt="" />
               </div>
               <div className="cont pt-30">
                 <h5>From Go to TypeScript: A Strategic Rewrite for the Modern Development Era</h5>
