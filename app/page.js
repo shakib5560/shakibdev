@@ -8,7 +8,7 @@ import Marq2 from '@/components/common/Marq2';
 import Navbar from '@/components/common/Navbar';
 import Script from 'next/script';
 import Header from '@/components/home-personal/Header';
-import Clients from '@/components/common/Clients';
+
 
 import Blog from '@/components/home-personal/Blog';
 
@@ -34,6 +34,8 @@ export const metadata = {
   },
 };
 
+import ScrollReveal from '@/components/common/ScrollReveal';
+
 export default function Home() {
   return (
     <body className="home-personal">
@@ -46,30 +48,57 @@ export default function Home() {
         <div id="smooth-content">
           <main className="main-bg o-hidden">
             <section id="home">
+              {/* Header has its own complex animations, keeping it unwrapped or handled internally */}
               <Header />
             </section>
-            <Marq />
+
+            <ScrollReveal delay={0.2}>
+              <Marq />
+            </ScrollReveal>
+
             <section id="about">
-              <About />
+              <ScrollReveal>
+                <About />
+              </ScrollReveal>
             </section>
+
             <section id="services">
-              <Services />
+              <ScrollReveal>
+                <Services />
+              </ScrollReveal>
             </section>
+
             <section id="portfolio">
+              {/* Portfolio has GSAP pinning which might conflict with transform, so we wrap the inner content if needed or leave as is if GSAP handles reveal */}
               <Portfolio />
             </section>
+
             <section id="skills">
-              <Skills />
+              <ScrollReveal>
+                <Skills />
+              </ScrollReveal>
             </section>
+
             <section id="testimonials">
-              <Testimonials />
+              <ScrollReveal>
+                <Testimonials />
+              </ScrollReveal>
             </section>
+
             <section id="blog">
-              <Blog />
+              <ScrollReveal>
+                <Blog />
+              </ScrollReveal>
             </section>
-            <Marq2 />
+
+            <ScrollReveal>
+              <Marq2 />
+            </ScrollReveal>
+
             <section id="contact">
-              <Footer />
+              <ScrollReveal>
+                <Footer />
+              </ScrollReveal>
             </section>
           </main>
         </div>

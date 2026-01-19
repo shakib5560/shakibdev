@@ -87,7 +87,7 @@ function Testimonials() {
                     <div className="ml-20">
                       <h6 className="fz-18">Dr Alim Uddin</h6>
                       <span className="p-color opacity-8 fz-15 mt-5">
-                      Founder at Kutu Chand Foundation
+                        Founder at Kutu Chand Foundation
                       </span>
                     </div>
                   </div>
@@ -114,9 +114,9 @@ function Testimonials() {
                     </div>
                     <div className="ml-20">
                       <h6 className="fz-18">
-                      Karol</h6>
+                        Karol</h6>
                       <span className="p-color opacity-8 fz-15 mt-5">
-                      Digital Marketer From UK
+                        Digital Marketer From UK
                       </span>
                     </div>
                   </div>

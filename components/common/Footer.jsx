@@ -72,48 +72,48 @@ function Footer() {
       </button>
     </div> */}
 
-<ul className="rest social-icon d-flex align-items-center">
-      <li className="hover-this cursor-pointer">
-        <a
-          href="https://www.facebook.com/profile.php?id=100067792970218"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaFacebookF />
-        </a>
-      </li>
+              <ul className="rest social-icon d-flex align-items-center">
+                <li className="hover-this cursor-pointer">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100067792970218"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaFacebookF />
+                  </a>
+                </li>
 
-      <li className="hover-this cursor-pointer ml-10">
-        <a
-          href="https://x.com/DevShakib6"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaXTwitter />
-        </a>
-      </li>
+                <li className="hover-this cursor-pointer ml-10">
+                  <a
+                    href="https://x.com/DevShakib6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaXTwitter />
+                  </a>
+                </li>
 
-      <li className="hover-this cursor-pointer ml-10">
-        <a
-          href="https://www.linkedin.com/in/sheikh-shamiul-834878206/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedinIn />
-        </a>
-      </li>
+                <li className="hover-this cursor-pointer ml-10">
+                  <a
+                    href="https://www.linkedin.com/in/sheikh-shamiul-834878206/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                </li>
 
-      <li className="hover-this cursor-pointer ml-10">
-        <a
-          href="https://github.com/shakib5560"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub />
-        </a>
-      </li>
-    </ul>
-              
+                <li className="hover-this cursor-pointer ml-10">
+                  <a
+                    href="https://github.com/shakib5560"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub />
+                  </a>
+                </li>
+              </ul>
+
             </div>
           </div>
 

@@ -76,28 +76,28 @@ function Portfolio() {
         <div className="cards">
 
 
-         <div className="card-item sub-bg">
+          <div className="card-item sub-bg">
             <div className="row">
               <div className="col-lg-5">
                 <div className="cont">
                   <div>
                     <div className="mb-15">
                       <a href="/portfolio-grid" className="tag">
-                      JavaScript
+                        JavaScript
                       </a>
                       <a href="/portfolio-grid" className="tag">
-                      Express JS
+                        Express JS
                       </a>
                     </div>
                     <h4>tubeX</h4>
                   </div>
                   <div>
                     <p>
-                  An open-source backend REST API for a video sharing platform, built with Node.js, Express, and MongoDB.
+                      An open-source backend REST API for a video sharing platform, built with Node.js, Express, and MongoDB.
                     </p>
                     <a target="_blank" href="https://github.com/shakib5560/tubeX" className="underline mt-15">
                       <span className="text main-color sub-title">
-                       View Source Code <FaGithub className='text-white' />
+                        View Source Code <FaGithub className='text-white' />
                       </span>
                     </a>
                   </div>
@@ -119,7 +119,7 @@ function Portfolio() {
                   <div>
                     <div className="mb-15">
                       <a href="/portfolio-grid" className="tag">
-                      Vanilla JS
+                        Vanilla JS
                       </a>
                       <a href="/portfolio-grid" className="tag">
                         Django
@@ -129,8 +129,8 @@ function Portfolio() {
                   </div>
                   <div>
                     <p>
-                    Developed a full-stack eCommerce platform using Django and JavaScript, enabling seamless product browsing, user
-                    authentication, and order management.
+                      Developed a full-stack eCommerce platform using Django and JavaScript, enabling seamless product browsing, user
+                      authentication, and order management.
                     </p>
                     <a target="_blank" href="https://github.com/shakib5560/ToyGalaxy" className="underline mt-15">
                       <span className="text main-color sub-title">
@@ -150,19 +150,19 @@ function Portfolio() {
 
 
 
-                   <div className="card-item sub-bg">
+          <div className="card-item sub-bg">
             <div className="row">
               <div className="col-lg-5">
                 <div className="cont">
                   <div>
                     <div className="mb-15">
                       <a href="/portfolio-grid" className="tag">
-                      Next Js Full Stack
+                        Next Js Full Stack
                       </a>
                       <a href="/portfolio-grid" className="tag">
                         MongoDB
                       </a>
-                        <a href="/portfolio-grid" className="tag">
+                      <a href="/portfolio-grid" className="tag">
                         Node Js
                       </a>
                     </div>
@@ -170,7 +170,7 @@ function Portfolio() {
                   </div>
                   <div>
                     <p>
-                    A full-stack application built with the Next.js T3 stack. It’s a multi-vendor e-commerce website that handles over 10,000 active users every month.
+                      A full-stack application built with the Next.js T3 stack. It’s a multi-vendor e-commerce website that handles over 10,000 active users every month.
                     </p>
                     <a target="_blank" href="https://rinors.com/" className="underline mt-15">
                       <span className="text main-color sub-title">
@@ -187,7 +187,7 @@ function Portfolio() {
               </div>
             </div>
           </div>
-          
+
 
 
           <div className="card-item sub-bg">
@@ -207,11 +207,11 @@ function Portfolio() {
                   </div>
                   <div>
                     <p>
-                    Completed the frontend for CarHub multi-vendor website where users can submit, edit, and remove their products.
+                      Completed the frontend for CarHub multi-vendor website where users can submit, edit, and remove their products.
                     </p>
                     <a target="_blank" href="https://github.com/shakib5560/CarHub-Multi-Vendor-eCommerce-website-by-React-TS" className="underline mt-15">
                       <span className="text main-color sub-title">
-                      View Source Code <FaGithub className='text-white' />
+                        View Source Code <FaGithub className='text-white' />
                       </span>
                     </a>
                   </div>
@@ -243,11 +243,11 @@ function Portfolio() {
                   </div>
                   <div>
                     <p>
-                    Patients Management system API using FastAPI
+                      Patients Management system API using FastAPI
                     </p>
                     <a target="_blank" href="https://github.com/shakib5560/MediTrack?tab=readme-ov-file#patients-management-system-api-using-fastapi" className="underline mt-15">
                       <span className="text main-color sub-title">
-                      View Source Code<FaGithub className='text-white' />
+                        View Source Code<FaGithub className='text-white' />
                       </span>
                     </a>
                   </div>
@@ -263,7 +263,7 @@ function Portfolio() {
 
 
 
-                 <div className="card-item sub-bg">
+          <div className="card-item sub-bg">
             <div className="row">
               <div className="col-lg-5">
                 <div className="cont">
@@ -275,7 +275,7 @@ function Portfolio() {
                       <a href="/portfolio-grid" className="tag">
                         Next JS
                       </a>
-                              <a href="/portfolio-grid" className="tag">
+                      <a href="/portfolio-grid" className="tag">
                         MongoDB
                       </a>
                     </div>
@@ -283,17 +283,17 @@ function Portfolio() {
                   </div>
                   <div>
                     <p>
-                   AI-Powered Service Finder
+                      AI-Powered Service Finder
                     </p>
                     <a target="_blank" href="https://github.com/shakib5560/servicoBD_frontend" className="underline mt-15">
                       <span className="text main-color sub-title">
-                      View Source Code - Frontend <FaGithub className='text-white' />
+                        View Source Code - Frontend <FaGithub className='text-white' />
                       </span>
                     </a>
 
-                           <a target="_blank" href="https://github.com/shakib5560/servicoBD_backend" className="underline mt-15">
+                    <a target="_blank" href="https://github.com/shakib5560/servicoBD_backend" className="underline mt-15">
                       <span className="text main-color sub-title">
-                      View Source Code - Backend<FaGithub className='text-white' />
+                        View Source Code - Backend<FaGithub className='text-white' />
                       </span>
                     </a>
                   </div>
@@ -327,11 +327,11 @@ function Portfolio() {
                   </div>
                   <div>
                     <p>
-                    LIST & LIVE will be the most powerful and visually stunning real estate multi-vendor platform in Bangladesh.
+                      LIST & LIVE will be the most powerful and visually stunning real estate multi-vendor platform in Bangladesh.
                     </p>
                     <a target="_blank" href="https://github.com/shakib5560/List-Live" className="underline mt-15">
                       <span className="text main-color sub-title">
-                      View Source Code <FaGithub className='text-white' />
+                        View Source Code <FaGithub className='text-white' />
                       </span>
                     </a>
                   </div>
@@ -356,18 +356,18 @@ function Portfolio() {
                         React.js
                       </a>
                       <a href="/portfolio-grid" className="tag">
-                      CloudFlare
+                        CloudFlare
                       </a>
                     </div>
                     <h4>FoodSvaly</h4>
                   </div>
                   <div>
                     <p>
-                    FoodSvaly – an intuitive, modern, and responsive food delivery platform where users can browse and order delicious dishes from various restaurants.
+                      FoodSvaly – an intuitive, modern, and responsive food delivery platform where users can browse and order delicious dishes from various restaurants.
                     </p>
                     <a target="_blank" href="https://github.com/shakib5560/FoodSvaly" className="underline mt-15">
                       <span className="text main-color sub-title">
-                      View Source Code <FaGithub className='text-white' />
+                        View Source Code <FaGithub className='text-white' />
                       </span>
                     </a>
                   </div>
@@ -382,7 +382,7 @@ function Portfolio() {
           </div>
 
 
-                    <div className="card-item sub-bg">
+          <div className="card-item sub-bg">
             <div className="row">
               <div className="col-lg-5">
                 <div className="cont">
@@ -392,18 +392,18 @@ function Portfolio() {
                         C++
                       </a>
                       <a href="/portfolio-grid" className="tag">
-                      OPEN AI LLM
+                        OPEN AI LLM
                       </a>
                     </div>
                     <h4>career_z</h4>
                   </div>
                   <div>
                     <p>
-                    Career_Z is a terminal-based career recommendation system built with C++, powered by the Groq LLM API for generating personalized career suggestions, and integrated with a Neon PostgreSQL database for storing user responses.
+                      Career_Z is a terminal-based career recommendation system built with C++, powered by the Groq LLM API for generating personalized career suggestions, and integrated with a Neon PostgreSQL database for storing user responses.
                     </p>
                     <a target="_blank" href="https://github.com/shakib5560/career_z" className="underline mt-15">
                       <span className="text main-color sub-title">
-                      View Source Code <FaGithub className='text-white' />
+                        View Source Code <FaGithub className='text-white' />
                       </span>
                     </a>
                   </div>

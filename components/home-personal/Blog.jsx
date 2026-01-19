@@ -1,4 +1,5 @@
 import React from 'react';
+import MagneticButton from '@/components/common/MagneticButton';
 
 function Blog() {
   return (
@@ -15,14 +16,12 @@ function Blog() {
               </h3>
             </div>
             <div className="ml-auto vi-more">
-              <a
+              <MagneticButton
                 href="https://www.linkedin.com/in/sheikh-shamiul-834878206/recent-activity/articles/"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="butn butn-sm butn-bord radius-30"
               >
                 <span>View All</span>
-              </a>
+              </MagneticButton>
               <span className="icon ti-arrow-top-right"></span>
             </div>
           </div>
