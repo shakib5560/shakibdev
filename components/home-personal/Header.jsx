@@ -71,7 +71,7 @@ function Header() {
                 <div className="row">
                   <div className="col-lg-9">
                     <div className="text mt-30">
-                      <p className="main-color text-[20px] text-600">
+                      <p className="main-color text-[20px] text-600 responsive-p">
                         BSC (BTech) in CSE | Full Stack Web Developer | Cloud Engineering Enthusiast | Quick Learner | Fluent communicator | Empowering Businesses to Stand Out—Through the Power of Code.
                       </p>
                     </div>
@@ -99,41 +99,44 @@ function Header() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="info d-flex align-items-center justify-content-end mt-100 flex-wrap gap-4 responsive-info">
-            <div className="item">
-              <h6 className="sub-title mb-10">Email :</h6>
-              <span className="p-color">dev.shakib@outlook.com</span>
+            <div className="info d-flex align-items-center justify-content-end mt-100 flex-wrap gap-4 responsive-info">
+              <div className="item">
+                <h6 className="sub-title mb-10">Email :</h6>
+                <span className="p-color">dev.shakib@outlook.com</span>
+              </div>
+              <div className="item">
+                <h6 className="sub-title mb-10">Phone :</h6>
+                <span className="p-color">+8801990668674</span>
+              </div>
+              <div className="item">
+                <h6 className="sub-title mb-10">Address :</h6>
+                <span className="p-color">Mirpur, Dhaka, Bangladesh</span>
+              </div>
             </div>
-            <div className="item">
-              <h6 className="sub-title mb-10">Phone :</h6>
-              <span className="p-color">+8801990668674</span>
-            </div>
-            <div className="item">
-              <h6 className="sub-title mb-10">Address :</h6>
-              <span className="p-color">Mirpur, Dhaka, Bangladesh</span>
-            </div>
-          </div>
 
-          <style jsx>{`
-            @media (max-width: 768px) {
-              .responsive-h1 {
-                font-size: 35px !important;
-                flex-wrap: wrap;
-              }
-              .responsive-h3 {
-                font-size: 24px !important;
-              }
-              .responsive-info {
-                justify-content: flex-start !important;
-                margin-top: 50px !important;
-              }
-              .responsive-info .item {
-                width: 100%;
-                margin-bottom: 20px;
-              }
+            <style jsx>{`
+          @media (max-width: 768px) {
+            .responsive-h1 {
+              font-size: 28px !important;
+              flex-wrap: wrap;
             }
-          `}</style>
+            .responsive-h3 {
+              font-size: 20px !important;
+            }
+            .responsive-p {
+              font-size: 16px !important;
+            }
+            .responsive-info {
+              justify-content: flex-start !important;
+              margin-top: 50px !important;
+            }
+            .responsive-info .item {
+              width: 100%;
+              margin-bottom: 20px;
+            }
+          }
+        `}</style>
+          </div>
         </div>
       </div>
     </>
