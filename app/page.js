@@ -143,7 +143,7 @@ export default function Home() {
         src="/assets/js/imgReveal/imagesloaded.pkgd.min.js"
       ></Script>
 
-      {/* <Script src="/assets/js/smoother-script.js" strategy="lazyOnload" /> */}
+      <Script src="/assets/js/smoother-script.js" strategy="lazyOnload" />
 
       <Script src="/assets/js/scripts.js"></Script>
     </body>
