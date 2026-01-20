@@ -37,7 +37,7 @@ function Testimonials() {
           <div className="d-flex align-items-center">
             <div>
               <span className="sub-title main-color mb-5">Testimonials</span>
-              <h3 className="fw-600 fz-50 text-u d-rotate wow">
+              <h3 className="fw-600 fz-50 text-u d-rotate wow responsive-h3">
                 <span className="rotate-text">
                   Trusted <span className="fw-200">by Clients.</span>
                 </span>
@@ -154,6 +154,21 @@ function Testimonials() {
           </Swiper>
         </div>
       </div>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .responsive-h3 {
+            font-size: 35px !important;
+          }
+          .sec-head .d-flex {
+            flex-direction: column;
+            align-items: flex-start !important;
+          }
+           .ml-auto {
+            margin-left: 0 !important;
+            margin-top: 20px;
+          }
+        }
+      `}</style>
     </section>
   );
 }

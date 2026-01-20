@@ -392,8 +392,9 @@ figure {
 .social-icon a {
   width: 42px;
   height: 42px;
-  line-height: 42px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
@@ -4801,8 +4802,9 @@ footer .subscribe-minimal button {
 footer .subscribe-minimal .social-icon a {
   width: 40px;
   height: 40px;
-  line-height: 40px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }

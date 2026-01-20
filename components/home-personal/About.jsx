@@ -26,6 +26,23 @@ const StarryBackground = () => {
 };
 
 function About() {
+  const [radius, setRadius] = useState(120);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 480) {
+        setRadius(80);
+      } else if (window.innerWidth < 768) {
+        setRadius(100);
+      } else {
+        setRadius(120);
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section
       className="about-section"
@@ -33,7 +50,7 @@ function About() {
         position: 'relative',
         width: '100%',
         minHeight: '100vh',
-        backgroundColor: '#0E0E0E', // Updated to #0E0E0E
+        backgroundColor: '#0E0E0E',
         color: '#fff',
         overflow: 'hidden',
         display: 'flex',
@@ -47,7 +64,7 @@ function About() {
 
       {/* Main Grid Container */}
       <div
-        className="container"
+        className="container responsive-grid"
         style={{
           position: 'relative',
           zIndex: 10,
@@ -187,7 +204,6 @@ function About() {
               {/* Orbiting Icons */}
               {[FaCode, FaServer, FaRocket, SiReact, SiNextdotjs, SiNodedotjs, SiPython, GiArtificialIntelligence].map((Icon, i) => {
                 const angle = (i / 8) * 2 * Math.PI;
-                const radius = 120;
                 const x = Math.cos(angle) * radius;
                 const y = Math.sin(angle) * radius;
 
@@ -233,6 +249,24 @@ function About() {
         </motion.div>
 
       </div>
+
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .responsive-grid {
+            grid-template-columns: 1fr !important;
+            padding: 20px 0 !important;
+          }
+          .about-section {
+            padding: 40px 10px !important;
+          }
+          h2 {
+            font-size: 1.8rem !important;
+          }
+          h3 {
+            font-size: 1.3rem !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

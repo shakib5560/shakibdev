@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -134,6 +135,23 @@ function Footer() {
       <div className="circle-blur">
         <img src="/assets/imgs/map.png" alt="" />
       </div>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .md-mb80 {
+            margin-bottom: 40px !important;
+          }
+          .md-mb50 {
+            margin-bottom: 30px !important;
+          }
+          footer .container {
+            padding-top: 40px !important;
+            padding-bottom: 40px !important;
+          }
+          footer .mt-80 {
+            margin-top: 40px !important;
+          }
+        }
+      `}</style>
     </footer>
   );
 }

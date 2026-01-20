@@ -31,11 +31,11 @@ function Services() {
               <span className="sub-title main-color mb-5">My Specialize</span>
               <h3 className="fw-600 fz-50 text-u d-rotate wow">
                 <span className="rotate-text">
-                  Featured <span className="fw-200">Services.</span>
+                  Featured <span className="fw-200 responsive-span">Services.</span>
                 </span>
               </h3>
             </div>
-            <div className="ml-auto vi-more">
+            <div className="ml-auto vi-more responsive-vi-more">
               <a
                 href="https://www.linkedin.com/in/sheikh-shamiul-834878206/"
                 target="_blank"
@@ -121,6 +121,21 @@ function Services() {
 
         </div>
       </div>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .sec-head h3 {
+            font-size: 35px !important;
+          }
+          .responsive-vi-more {
+             margin-top: 20px;
+             margin-left: 0 !important;
+          }
+           .sec-head .d-flex {
+            flex-direction: column;
+            align-items: flex-start !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
