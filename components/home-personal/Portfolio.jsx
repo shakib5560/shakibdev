@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaUserLock } from "react-icons/fa";
 import { motion } from 'framer-motion';
 
 function Portfolio() {
@@ -55,6 +55,20 @@ function Portfolio() {
 
   const projects = [
     {
+      id: "ainos",
+      title: "AINOS",
+      tags: ["Next JS", "Nest JS"],
+      desc: "A minimalistic eCommerce website made with Next.js and Nest.js.",
+      img: "/assets/imgs/works/1/alnos.png",
+      github: "https://github.com/shakib5560/AINOS",
+      live: "https://ainos-premium.netlify.app/",
+      adminCredentials: {
+        link: "https://ainos-premium.netlify.app/admin",
+        email: "admin@test.com",
+        password: "224466"
+      }
+    },
+    {
       id: "atlania",
       title: "Atlania",
       tags: ["Next.js", "FastAPI", "Tailwind CSS"],
@@ -96,14 +110,7 @@ function Portfolio() {
       img: "/assets/imgs/works/1/2-min.jpg",
       github: "https://github.com/shakib5560/CarHub-Multi-Vendor-eCommerce-website-by-React-TS"
     },
-    {
-      id: "meditrack",
-      title: "MediTrack",
-      tags: ["FastAPI", "MYSQL"],
-      desc: "Patients Management system API providing secure and efficient handling of medical records.",
-      img: "/assets/imgs/works/1/3-min.jpg",
-      github: "https://github.com/shakib5560/MediTrack"
-    },
+
     {
       id: "servicobd",
       title: "servicoBD",
@@ -120,14 +127,7 @@ function Portfolio() {
       img: "/assets/imgs/works/1/4-min.jpg",
       github: "https://github.com/shakib5560/List-Live"
     },
-    {
-      id: "foodsvaly",
-      title: "FoodSvaly",
-      tags: ["React.js", "CloudFlare"],
-      desc: "Responsive food delivery platform where users can browse and order from various restaurants.",
-      img: "/assets/imgs/works/1/5-min.jpg",
-      github: "https://github.com/shakib5560/FoodSvaly"
-    },
+
     {
       id: "careerz",
       title: "career_z",
@@ -225,6 +225,96 @@ function Portfolio() {
                               <span className="fz-14 fw-600">Live Demo</span>
                               <FaExternalLinkAlt className="fz-12" />
                             </motion.a>
+                          )}
+
+                          {project.adminCredentials && (
+                            <div className="admin-access-container" style={{ position: 'relative', display: 'inline-block' }}>
+                              <motion.div
+                                whileHover="hover"
+                                initial="rest"
+                                animate="rest"
+                                style={{ position: 'relative', zIndex: 10 }}
+                              >
+                                <h6
+                                  className="d-flex align-items-center gap-2 mb-0"
+                                  style={{
+                                    cursor: 'pointer',
+                                    fontSize: '14px',
+                                    color: '#e63946',
+                                    fontWeight: 600,
+                                    border: '1px solid rgba(230, 57, 70, 0.3)',
+                                    padding: '8px 16px',
+                                    borderRadius: '30px',
+                                    background: 'rgba(230, 57, 70, 0.1)'
+                                  }}
+                                >
+                                  <FaUserLock /> Admin Access
+                                </h6>
+
+                                <motion.div
+                                  variants={{
+                                    rest: { opacity: 0, y: 10, pointerEvents: 'none', scale: 0.95 },
+                                    hover: { opacity: 1, y: 0, pointerEvents: 'auto', scale: 1 }
+                                  }}
+                                  transition={{ duration: 0.2 }}
+                                  style={{
+                                    position: 'absolute',
+                                    bottom: '100%',
+                                    left: '50%',
+                                    transform: 'translateX(-50%)',
+                                    marginBottom: '10px',
+                                    background: '#1a1a1a',
+                                    border: '1px solid rgba(255,255,255,0.1)',
+                                    padding: '15px',
+                                    borderRadius: '12px',
+                                    minWidth: '220px',
+                                    boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+                                    backdropFilter: 'blur(10px)'
+                                  }}
+                                >
+                                  <div className="mb-2">
+                                    <span style={{ fontSize: '11px', color: '#888', display: 'block' }}>Email</span>
+                                    <div className="d-flex align-items-center justify-content-between">
+                                      <span style={{ fontSize: '13px', color: '#fff', fontWeight: 500 }}>{project.adminCredentials.email}</span>
+                                    </div>
+                                  </div>
+                                  <div className="mb-3">
+                                    <span style={{ fontSize: '11px', color: '#888', display: 'block' }}>Password</span>
+                                    <div className="d-flex align-items-center justify-content-between">
+                                      <span style={{ fontSize: '13px', color: '#fff', fontWeight: 500 }}>{project.adminCredentials.password}</span>
+                                    </div>
+                                  </div>
+                                  <a
+                                    href={project.adminCredentials.link}
+                                    target="_blank"
+                                    className="butn butn-sm w-100 text-center"
+                                    style={{
+                                      fontSize: '12px',
+                                      padding: '6px',
+                                      background: '#e63946',
+                                      color: '#fff',
+                                      borderRadius: '6px',
+                                      display: 'block'
+                                    }}
+                                  >
+                                    Login Dashboard
+                                  </a>
+                                  {/* Arrow */}
+                                  <div style={{
+                                    position: 'absolute',
+                                    bottom: '-6px',
+                                    left: '50%',
+                                    marginLeft: '-6px',
+                                    width: '12px',
+                                    height: '12px',
+                                    background: '#1a1a1a',
+                                    borderRight: '1px solid rgba(255,255,255,0.1)',
+                                    borderBottom: '1px solid rgba(255,255,255,0.1)',
+                                    transform: 'rotate(45deg)'
+                                  }}></div>
+                                </motion.div>
+                              </motion.div>
+                            </div>
                           )}
                         </div>
                       </div>

@@ -1,9 +1,9 @@
 import React from 'react';
 
 function Marq2() {
-  const marquess = ['Available For Project and Job']; // Replace with your actual array
+  const marquess = ['Available For Project and Job']; 
   const AllMarquess = Array(6).fill(marquess).flat();
-  const contact = ['Contact Me']; // Replace with your actual array
+  const contact = ['Contact Me']; 
   const AllContact = Array(6).fill(contact).flat();
 
   return (
