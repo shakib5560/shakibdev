@@ -28,7 +28,7 @@ function Marq() {
       <span className={isOutline ? 'text-outline' : 'text-filled'}>{item}</span>
       {isOutline
         ? <span className="separator-dot"></span>
-        : <span className="separator-slash">/</span>
+        : <span className="separator-slash"></span>
       }
     </div>
   );

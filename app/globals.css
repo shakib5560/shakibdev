@@ -4,31 +4,12 @@
 
 @layer utilities {
     .text-shadow-md {
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Custom shadow */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     }
 }
 
-/* ─── Mobile: disable smooth-scroll wrapper behaviour ───────────────────── */
+/* Hide decorative background lines on mobile */
 @media (max-width: 767px) {
-  /* Undo any fixed height / overflow that ScrollSmoother sets on these */
-  #smooth-wrapper,
-  #smooth-content {
-    overflow: visible !important;
-    height: auto !important;
-    will-change: auto !important;
-    transform: none !important;
-  }
-
-  /* Restore normal body scroll */
-  body {
-    overflow-y: auto !important;
-    /* Enable smooth momentum scrolling on iOS */
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* Hide the decorative background lines on mobile (saves paint) */
   .lines { display: none; }
-
-  /* Hide the custom cursor element (safety net in case JS hasn't run yet) */
   .cursor { display: none; }
 }
