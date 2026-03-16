@@ -77,6 +77,7 @@ export default function Home() {
         </section>
       </main>
 
+      <Script strategy="beforeInteractive" src="/assets/js/ScrollTrigger.min.js" />
       <Script strategy="beforeInteractive" src="/assets/js/plugins.js" />
       <Script strategy="beforeInteractive" src="/assets/js/TweenMax.min.js" />
       <Script strategy="beforeInteractive" src="/assets/js/charming.min.js" />
