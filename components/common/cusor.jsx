@@ -1,8 +1,16 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function Cursor() {
+  const [isTouch, setIsTouch] = useState(false);
+
   useEffect(() => {
+    // Detect touch / mobile — no custom cursor on touch screens
+    if ('ontouchstart' in window || window.innerWidth < 768) {
+      setIsTouch(true);
+      return;
+    }
+
     const link = document.querySelectorAll('.hover-this');
     const cursor = document.querySelector('.cursor');
 
@@ -36,6 +44,9 @@ function Cursor() {
       });
     });
   }, []);
+
+  // Don't render cursor element on touch/mobile devices
+  if (isTouch) return null;
 
   return <div className="cursor"></div>;
 }

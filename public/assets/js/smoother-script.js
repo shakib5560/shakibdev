@@ -1,12 +1,17 @@
 (function () {
+  var isMobile = window.innerWidth < 768;
 
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  gsap.registerPlugin(ScrollTrigger);
 
-  ScrollTrigger.normalizeScroll(true)
+  if (!isMobile) {
+    gsap.registerPlugin(ScrollSmoother);
 
-  // create the smooth scroller FIRST!
-  let smoother = ScrollSmoother.create({
-    smooth: 2,
-    effects: true,
-  });
+    ScrollTrigger.normalizeScroll(true);
+
+    // create the smooth scroller FIRST! (desktop only)
+    var smoother = ScrollSmoother.create({
+      smooth: 2,
+      effects: true,
+    });
+  }
 })()
