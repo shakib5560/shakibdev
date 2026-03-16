@@ -1,38 +1,33 @@
 'use client';
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 function MagneticButton({ children, href, className = '', onClick }) {
     const ref = useRef(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const check = () => setIsMobile('ontouchstart' in window || window.innerWidth < 768);
+        check();
+        window.addEventListener('resize', check);
+        return () => window.removeEventListener('resize', check);
+    }, []);
 
     const handleMouseMove = (e) => {
         const { clientX, clientY } = e;
         const { left, top, width, height } = ref.current.getBoundingClientRect();
         const x = clientX - (left + width / 2);
         const y = clientY - (top + height / 2);
-        setPosition({ x: x * 0.3, y: y * 0.3 }); // Magnetic strength
+        setPosition({ x: x * 0.3, y: y * 0.3 });
     };
 
     const handleMouseLeave = () => {
         setPosition({ x: 0, y: 0 });
     };
 
-    const ButtonContent = (
-        <motion.div
-            className={`magnetic-btn ${className}`}
-            ref={ref}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            animate={{ x: position.x, y: position.y }}
-            transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-        >
-            <span className="btn-shine"></span>
-            <span className="btn-content">{children}</span>
-
-            <style jsx global>{`
+    const sharedStyle = (
+        <style jsx global>{`
         .magnetic-btn {
           position: relative;
           display: inline-flex;
@@ -52,6 +47,14 @@ function MagneticButton({ children, href, className = '', onClick }) {
           cursor: pointer;
           transition: border-color 0.3s ease;
           z-index: 1;
+        }
+
+        /* On mobile: drop the expensive backdrop-filter */
+        @media (max-width: 767px) {
+          .magnetic-btn {
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+          }
         }
 
         .magnetic-btn:hover {
@@ -94,6 +97,35 @@ function MagneticButton({ children, href, className = '', onClick }) {
           gap: 0.5rem;
         }
       `}</style>
+    );
+
+    // On mobile: plain static button — no Framer, no spring, no repaints
+    if (isMobile) {
+        const inner = (
+            <div className={`magnetic-btn ${className}`}>
+                {sharedStyle}
+                <span className="btn-shine"></span>
+                <span className="btn-content">{children}</span>
+            </div>
+        );
+        if (href) return <a href={href} onClick={onClick} style={{ textDecoration: 'none' }}>{inner}</a>;
+        return <div onClick={onClick} style={{ display: 'inline-block' }}>{inner}</div>;
+    }
+
+    const ButtonContent = (
+        <motion.div
+            className={`magnetic-btn ${className}`}
+            ref={ref}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            animate={{ x: position.x, y: position.y }}
+            transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+        >
+            {sharedStyle}
+            <span className="btn-shine"></span>
+            <span className="btn-content">{children}</span>
         </motion.div>
     );
 

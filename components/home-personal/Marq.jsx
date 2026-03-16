@@ -1,8 +1,17 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 function Marq() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
   const itemsTop = [
     'Rest API', 'Express.js', 'FastAPI', 'Django', 'Next.js', 'React', 'Tailwind',
   ];
@@ -11,55 +20,58 @@ function Marq() {
     'PostgreSQL', 'MongoDB', 'Docker', 'Git', 'Deployment', 'System Design', 'Cloud',
   ];
 
-  // Duplicate for seamless loop
   const marqueeTop = [...itemsTop, ...itemsTop, ...itemsTop, ...itemsTop];
   const marqueeBottom = [...itemsBottom, ...itemsBottom, ...itemsBottom, ...itemsBottom];
+
+  const renderItem = (item, i, isOutline) => (
+    <div key={i} className={`marq-item ${isOutline ? 'outline-mode' : 'filled-mode'}`}>
+      <span className={isOutline ? 'text-outline' : 'text-filled'}>{item}</span>
+      {isOutline
+        ? <span className="separator-dot"></span>
+        : <span className="separator-slash">/</span>
+      }
+    </div>
+  );
 
   return (
     <section className="marq-section">
       <div className="marq-container">
-        <div className="glass-panel">
-          {/* Top Row - Outline Text - Left Scroll */}
+        <div className={`glass-panel${isMobile ? ' glass-panel--mobile' : ''}`}>
+          {/* Top Row */}
           <div className="marq-wrapper mb-20">
-            <motion.div
-              className="marq-content"
-              animate={{ x: "-50%" }}
-              transition={{
-                repeat: Infinity,
-                ease: "linear",
-                duration: 40,
-              }}
-              style={{ display: "flex", gap: "2rem" }} // Inline flex fix
-            >
-              {marqueeTop.map((item, i) => (
-                <div key={i} className="marq-item outline-mode">
-                  <span className="text-outline">{item}</span>
-                  <span className="separator-dot"></span>
-                </div>
-              ))}
-            </motion.div>
+            {isMobile ? (
+              <div className="marq-content marq-css-left" style={{ display: 'flex', gap: '2rem' }}>
+                {marqueeTop.map((item, i) => renderItem(item, i, true))}
+              </div>
+            ) : (
+              <motion.div
+                className="marq-content"
+                animate={{ x: "-50%" }}
+                transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+                style={{ display: "flex", gap: "2rem" }}
+              >
+                {marqueeTop.map((item, i) => renderItem(item, i, true))}
+              </motion.div>
+            )}
           </div>
 
-          {/* Bottom Row - Filled Text - Right Scroll */}
+          {/* Bottom Row */}
           <div className="marq-wrapper">
-            <motion.div
-              className="marq-content"
-              initial={{ x: "-50%" }}
-              animate={{ x: "0%" }}
-              transition={{
-                repeat: Infinity,
-                ease: "linear",
-                duration: 40,
-              }}
-              style={{ display: "flex", gap: "2rem" }} // Inline flex fix
-            >
-              {marqueeBottom.map((item, i) => (
-                <div key={i} className="marq-item filled-mode">
-                  <span className="text-filled">{item}</span>
-                  <span className="separator-slash">/</span>
-                </div>
-              ))}
-            </motion.div>
+            {isMobile ? (
+              <div className="marq-content marq-css-right" style={{ display: 'flex', gap: '2rem' }}>
+                {marqueeBottom.map((item, i) => renderItem(item, i, false))}
+              </div>
+            ) : (
+              <motion.div
+                className="marq-content"
+                initial={{ x: "-50%" }}
+                animate={{ x: "0%" }}
+                transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+                style={{ display: "flex", gap: "2rem" }}
+              >
+                {marqueeBottom.map((item, i) => renderItem(item, i, false))}
+              </motion.div>
+            )}
           </div>
         </div>
       </div>
@@ -104,6 +116,14 @@ function Marq() {
           );
         }
 
+        /* On mobile: remove expensive backdrop-filter & mask-image */
+        .glass-panel--mobile {
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
+          mask-image: none !important;
+          -webkit-mask-image: none !important;
+        }
+
         .marq-wrapper {
           display: flex;
           overflow: hidden;
@@ -119,7 +139,6 @@ function Marq() {
           flex-shrink: 0;
         }
 
-        /* Outline Text Style */
         .text-outline {
           font-size: 3.5rem;
           font-weight: 700;
@@ -136,7 +155,6 @@ function Marq() {
           text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
         }
 
-        /* Filled Text Style */
         .text-filled {
           font-size: 3.5rem;
           font-weight: 700;
@@ -150,7 +168,6 @@ function Marq() {
           color: var(--main-color, #4a90e2);
         }
 
-        /* Separators */
         .separator-dot {
           width: 8px;
           height: 8px;
@@ -164,12 +181,29 @@ function Marq() {
           font-weight: 300;
           color: rgba(255, 255, 255, 0.2);
         }
-        
+
         .mb-20 {
           margin-bottom: 1.5rem;
         }
 
-        /* Responsive */
+        /* CSS-only marquee animations for mobile */
+        @keyframes marquee-left {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        @keyframes marquee-right {
+          0%   { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
+        }
+        .marq-css-left {
+          animation: marquee-left 30s linear infinite;
+          will-change: transform;
+        }
+        .marq-css-right {
+          animation: marquee-right 30s linear infinite;
+          will-change: transform;
+        }
+
         @media (max-width: 991px) {
           .text-outline, .text-filled {
             font-size: 2.5rem;
