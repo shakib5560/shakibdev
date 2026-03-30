@@ -78,13 +78,13 @@ function About() {
       >
         {/* --- LEFT PANEL: Profile Hologram --- */}
         <motion.div
+          className="about-left-panel"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
           style={{
             background: 'rgba(255, 255, 255, 0.03)',
-            backdropFilter: 'blur(10px)',
             border: '1px solid rgba(255, 255, 255, 0.1)',
             borderRadius: '20px',
             padding: '2rem',
@@ -210,6 +210,7 @@ function About() {
                 return (
                   <motion.div
                     key={i}
+                    className="orbit-icon"
                     style={{
                       position: 'absolute',
                       left: '50%',
@@ -222,7 +223,6 @@ function About() {
                       translateX: '-50%',
                       translateY: '-50%',
                       background: 'rgba(255,255,255,0.05)',
-                      backdropFilter: 'blur(5px)',
                       border: '1px solid rgba(255,255,255,0.1)',
                       borderRadius: '50%',
                       display: 'flex',
@@ -264,6 +264,20 @@ function About() {
           }
           h3 {
             font-size: 1.3rem !important;
+          }
+          .about-left-panel {
+            backdrop-filter: none !important;
+          }
+          .orbit-icon {
+            backdrop-filter: none !important;
+          }
+        }
+        @media (min-width: 769px) {
+          .about-left-panel {
+            backdrop-filter: blur(10px);
+          }
+          .orbit-icon {
+            backdrop-filter: blur(5px);
           }
         }
       `}</style>

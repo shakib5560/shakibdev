@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 
 function Portfolio() {
   function Playing() {
+    if (window.innerWidth < 768) return;
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
       gsap.registerPlugin(ScrollTrigger);
 
@@ -170,12 +171,11 @@ function Portfolio() {
 
           <div className="cards">
             {projects.map((project, index) => (
-              <div className="card-item sub-bg mb-50" key={project.id} style={{
+              <div className="card-item sub-bg mb-50 project-card" key={project.id} style={{
                 borderRadius: '24px',
                 border: '1px solid rgba(255, 255, 255, 0.05)',
                 overflow: 'hidden',
-                background: 'rgba(255, 255, 255, 0.02)',
-                backdropFilter: 'blur(10px)'
+                background: 'rgba(255, 255, 255, 0.02)'
               }}>
                 <div className="row align-items-center">
                   <div className="col-lg-5">
@@ -356,6 +356,14 @@ function Portfolio() {
         .responsive-vi-more {
           margin-top: 20px;
           margin-left: 0 !important;
+        }
+        .project-card {
+          backdrop-filter: none;
+        }
+      }
+      @media (min-width: 769px) {
+        .project-card {
+          backdrop-filter: blur(10px);
         }
       }
     `}</style>

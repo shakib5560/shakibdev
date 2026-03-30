@@ -86,7 +86,7 @@ const GlowingEffect = memo(
         );
 
         useEffect(() => {
-            if (disabled) return;
+            if (disabled || (typeof window !== 'undefined' && ('ontouchstart' in window || window.innerWidth < 768))) return;
 
             const handleScroll = () => handleMove();
             const handlePointerMove = (e) => handleMove(e);
