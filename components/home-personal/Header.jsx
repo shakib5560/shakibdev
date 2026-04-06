@@ -97,7 +97,7 @@ function Header() {
                     </div>
                     <div className="d-flex gap-2 align-items-center mt-60 flex-wrap">
                       <MagneticButton
-                        href="https://drive.google.com/file/d/1vR03EPZxzrd2GBHSK_smDaOXRAhVBOmt/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1Nwzp3B4GMGp7as6Z4gmDwIzv0N_r81mC/view?usp=sharing"
                         className="butn butn-md butn-bord radius-30"
                       >
                         <span className="text flex gap-2"> <span>Resume </span> <span> <FaGoogleDrive /> </span> </span>

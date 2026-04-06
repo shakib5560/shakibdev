@@ -359,12 +359,30 @@ function Navbar() {
 
         @media (max-width: 576px) {
           .pill-navbar {
-            padding: 0 0.5rem;
+            padding: 0 0.25rem;
           }
           
           .pill-container {
-            padding: 0.65rem 1rem;
+            padding: 0.5rem 0.75rem;
             width: 100%;
+            gap: 0.5rem;
+          }
+
+          .pill-logo img {
+            height: 24px;
+          }
+
+          .pill-nav-icons {
+            gap: 0.25rem;
+          }
+
+          .pill-icon-link {
+            width: 36px;
+            height: 36px;
+          }
+
+          .pill-cta {
+            padding: 0.5rem;
           }
 
           /* Hide less important icons on very small screens if needed */
