@@ -58,8 +58,9 @@ function Services() {
               </div>
               <h5>Backend Development</h5>
               <div className="text mt-40">
-                <div className="mb-10">
+                <div className="mb-10 flex flex-wrap items-center gap-2">
                   <span className="tag">Django</span>
+                  <span className="tag">Nest JS</span>
                   <span className="tag">Express.js</span>
                   <span className="tag">FastAPI</span>
                   <span className="tag">T3-Stack</span>
@@ -81,7 +82,7 @@ function Services() {
               </div>
               <h5>Frontend Development</h5>
               <div className="text mt-40">
-                <div className="mb-10">
+                <div className="mb-10 flex flex-wrap items-center gap-2">
                   <span className="tag">Next.js</span>
                   <span className="tag">React.js</span>
                   <span className="tag">Redux.js</span>
@@ -104,10 +105,11 @@ function Services() {
               </div>
               <h5>REST API Development</h5>
               <div className="text mt-40">
-                <div className="mb-10">
+                <div className="mb-10 flex flex-wrap items-center gap-2">
                   <span className="tag">FastAPI</span>
                   <span className="tag">Express.js</span>
                   <span className="tag">Django Rest Framework</span>
+                  <span className="tag">GraphQL</span>
                 </div>
                 <p>
                   I build RESTful APIs that are easy to integrate, scalable, and secure. With proper validation, authentication, and documentation, my APIs ensure seamless communication between frontend, backend, and third-party services—built for real-world production use.
@@ -134,6 +136,25 @@ function Services() {
             flex-direction: column;
             align-items: flex-start !important;
           }
+        }
+        .tag {
+          font-size: 10px;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+          padding: 4px 12px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 20px;
+          color: rgba(255, 255, 255, 0.8);
+          background: rgba(255, 255, 255, 0.03);
+          display: inline-block;
+          font-weight: 500;
+          white-space: nowrap;
+          transition: all 0.3s ease;
+        }
+        .tag:hover {
+          background: rgba(255, 255, 255, 0.08);
+          border-color: rgba(255, 255, 255, 0.3);
+          color: #fff;
         }
       `}</style>
     </section>
