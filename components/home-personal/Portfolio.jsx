@@ -56,6 +56,15 @@ function Portfolio() {
 
   const projects = [
     {
+      id: "toygalaxy",
+      title: "ToyGalaxy",
+      tags: ["Vanilla JS", "Django"],
+      desc: "Developed a full-stack eCommerce platform using Django and JavaScript, serving 2,000+ daily users with optimized performance.",
+      img: "/assets/imgs/works/1/1-min.jpg",
+      github: "https://github.com/shakib5560/ToyGalaxy",
+      live: "https://www.toygalaxy.com.au/"
+    },
+    {
       id: "ainos",
       title: "AINOS",
       tags: ["Next JS", "Nest JS"],
@@ -85,15 +94,6 @@ function Portfolio() {
       desc: "An open-source backend REST API for a video sharing platform, built with Node.js, Express, and MongoDB.",
       img: "/assets/imgs/works/1/tubex-min.png",
       github: "https://github.com/shakib5560/tubeX"
-    },
-    {
-      id: "toygalaxy",
-      title: "ToyGalaxy",
-      tags: ["Vanilla JS", "Django"],
-      desc: "Developed a full-stack eCommerce platform using Django and JavaScript, enabling seamless product browsing and order management.",
-      img: "/assets/imgs/works/1/1-min.jpg",
-      github: "https://github.com/shakib5560/ToyGalaxy",
-      live: "https://www.toygalaxy.com.au/"
     },
     {
       id: "rinors",
